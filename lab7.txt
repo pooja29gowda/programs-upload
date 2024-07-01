@@ -1,0 +1,121 @@
+1... Write a Python program to count the occurrences of each word in a given sentence 
+
+string = “To change the overall look of your document. To change the look available in the gallery” 
+
+def count_word_occurrences(sentence):
+    # Split the sentence into words
+    words = sentence.split()
+    # Create a dictionary to store word counts
+    word_counts = {}
+
+    # Iterate through each word
+    for word in words:
+        # Update the count for each word
+        word_counts[word] = word_counts.get(word, 0) + 1
+
+    return word_counts
+# Given sentence
+sentence = "To change the overall look of your document. To change the look available in the gallery"
+
+# Count occurrences of each word
+word_occurrences = count_word_occurrences(sentence)
+
+# Print the word occurrences
+for word, count in word_occurrences.items():
+    print(f"{word}: {count}")
+
+OUTPUT
+
+To: 2
+change: 2
+the: 3
+overall: 1
+look: 2
+of: 1
+your: 1
+document.: 1
+available: 1
+in: 1
+gallery: 1
+........................................................................................................................................................................................................................................................................................................................................................................
+2...Write a Python program to remove a newline in Python 
+
+String = "\nBest \nDeeptech \nPython \nTraining\n" 
+
+def remove_newline(string):
+    # Remove newline characters using the replace()
+    string_without_newline = string.replace('\n', '')
+    return string_without_newline
+
+# Given string
+string = "\nBest \nDeeptech \nPython \nTraining\n"
+# Remove newline characters
+string_without_newline = remove_newline(string)
+# Print the string without newline characters
+print(string_without_newline)
+
+
+OUTPUT
+
+Best Deeptech Python Training
+.............................................................................................................................................................................................................................................................................................................................................................................
+3....Write a Python program to reverse words in a string 
+
+String = “Deeptech Python Training” 
+
+def reverse_words(string):
+    # Split the string into words
+    words = string.split()
+
+    # Reverse the order of words
+    reversed_words = words[::-1]
+
+    # Join the reversed words back into a string
+    reversed_string = ' '.join(reversed_words)
+
+    return reversed_string
+
+# Given string
+string = "Deeptech Python Training"
+
+# Reverse the words in the string
+reversed_string = reverse_words(string)
+
+# Print the reversed string
+print(reversed_string)
+
+OUTPUT
+
+Training Python Deeptech
+.............................................................................................................................................................................................................................................................................................................................................................................
+4...Write a Python program to count and display the vowels of a given text String=”Welcome to python Training
+
+def count_and_display_vowels(text):
+    # Define a set of vowels
+    vowels = {'a', 'e', 'i', 'o', 'u'}
+
+    # Initialize a counter for vowels
+    vowel_count = 0
+
+    # Iterate through each character in the text
+    for char in text:
+        # Check if the character is a vowel (case-insensitive)
+        if char.lower() in vowels:
+            vowel_count += 1
+            # Display the vowel
+            print(char, end=' ')
+
+    # Print the total count of vowels
+    print("\nTotal vowels:", vowel_count)
+
+# Given text
+text = "Welcome to python Training"
+
+# Count and display the vowels in the text
+count_and_display_vowels(text)
+
+OUTPUT
+
+e o e o o a i i 
+Total vowels: 8
+..............................................................................................................................................................................................................................................................................................................................................................................
