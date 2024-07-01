@@ -1,0 +1,123 @@
+1...... Write a Python program to Count all letters, digits, and special symbols from the given 
+
+string Input = “P@#yn26at^&i5ve” 
+
+def count_characters(input_string):
+    letters = 0
+    digits = 0
+    symbols = 0
+
+    for char in input_string:
+        if char.isalpha():
+            letters += 1
+        elif char.isdigit():
+            digits += 1
+        else:
+            symbols += 1
+
+    return letters, digits, symbols
+
+input_string = "P@#yn26at^&i5ve"
+letter_count, digit_count, symbol_count = count_characters(input_string)
+
+print("Chars =", letter_count)
+print("Digits =", digit_count)
+print("Symbol =", symbol_count)
+
+OUTPUT
+
+Chars = 8
+Digits = 3
+Symbol = 4
+.........................................................................................................................................................................................................................................................................................................................................................
+2.........Write a Python program to remove duplicate characters of a given string. 
+
+Input = “String and String Function” 
+
+def remove_duplicates(input_string):
+    # Create an empty string to store the result
+    result = ""
+    # Create a set to keep track of seen characters
+    seen = set()
+
+    for char in input_string:
+        # Check if the character is not in the set of seen characters
+        if char not in seen:
+            # If not, add it to the result string and the set
+            result += char
+            seen.add(char)
+
+    return result
+
+input_string = "String and String Function"
+output_string = remove_duplicates(input_string)
+print("Output:", output_string)
+
+OUTPUT
+
+String and Function
+.........................................................................................................................................................................................................................................................................................................................................................
+3....... Write a Python program to count Uppercase, Lowercase, special character and numeric values in a given string
+
+ Input = “Hell0 W0rld ! 123 * # welcome to pYtHoN” 
+
+def count_characters(input_string):
+    uppercase_count = 0
+    lowercase_count = 0
+    digit_count = 0
+    special_count = 0
+
+    for char in input_string:
+        if char.isupper():
+            uppercase_count += 1
+        elif char.islower():
+            lowercase_count += 1
+        elif char.isdigit():
+            digit_count += 1
+        else:
+            special_count += 1
+
+    return uppercase_count, lowercase_count, digit_count, special_count
+
+input_string = "Hell0 W0rld ! 123 * # welcome to pYtHoN"
+upper_count, lower_count, digit_count, special_count = count_characters(input_string)
+
+print("UpperCase :", upper_count)
+print("LowerCase :", lower_count)
+print("NumberCase :", digit_count)
+print("SpecialCase :", special_count)
+
+OUPUT
+
+UpperCase : 5
+LowerCase : 18
+NumberCase : 5
+SpecialCase : 11
+...............................................................................................................................................................................................................................................................................................................................................................
+4..... Write a Python Count vowels in a string 
+
+input= “Welcome to Python Assignment"
+
+def count_vowels(input_string):
+    vowels = 'aeiouAEIOU'
+    count = 0
+
+    for char in input_string:
+        if char in vowels:
+            count += 1
+
+    return count
+
+input_string = "Welcome to Python Assignment"
+vowel_count = count_vowels(input_string)
+
+print("Total vowels are:", vowel_count)
+
+OUTPUT
+
+Total vowels are: 8
+.....................................................................................................................................................................................................................................................................................................................................................................
+
+
+
+
