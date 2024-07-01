@@ -1,0 +1,158 @@
+1...python pgrm to check leap year
+
+year = 2020                                                                               #year to examine  
+if (year%400 == 0) or (year%4==0 and year%100!=0):                #condition
+    print("Leap Year")                                                                   #print if leap year                                                
+else:
+    print("Not a Leap Year")                                                         #print if not leap year
+
+
+OUTPUT
+
+Leap Year
+
+....................................................................................................................................................................................................................................................................
+
+2........python pgrm to find largest among 3 number
+
+
+num1 = 70                     #enter 1st number
+num2 = 25                     #2nd number
+num3 = 100                     #3rd number
+
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+num3 = float(input("Enter third number: "))
+
+if (num1 >= num2) and (num1 >= num3):            #if num1 > num 2 and num 3
+   largest = num1
+elif (num2 >= num1) and (num2 >= num3):         #if num 2>num1 and num 3
+   largest = num2
+else:
+   largest = num3                                                #num 3
+
+       print("The largest number is", largest)        #print largest
+
+
+OUTPUT
+
+ The largest number is 100
+....................................................................................................................................................................................................................................................................................
+
+3.......python program to check number is positive or negative
+
+num = int(input("Enter a number: "))                      #enter value of number
+if (num % 2) == 0:                                                    #condition
+    print("{0} is positive".format(num))                     #print if 0 is positive
+else:
+    print("{0} is negative".format(num))                    #print 0 if negative
+
+OUPUT
+
+Enter a number: 25
+25 is negative
+
+............................................................................................................................................................................................................................................................................................
+4.......A transport company charges the fare according to following table: Distance Charges 1-50 8 Rs./Km 51-100 10 Rs./Km > 100 12 Rs/Km
+
+distance = float(input("Enter the distance (in kilometers): "))                              
+ #ENTER THE DISTANCE TRAVELLED
+if distance<= 50:
+          
+ fare = distance * 8 
+elif distance <= 100:
+           
+fare = 50 * 8 + (distance - 50) * 10
+
+else:
+          
+ fare = 50 * 8 + 50 * 10 + (distance - 100) * 12
+print("The fare for the distance of", distance, "kilometers is Rs.", fare)
+
+
+OUTPUT
+
+Enter the distance (in kilometers):  5
+The fare for the distance of 5.0 kilometers is Rs. 40.0
+
+...............................................................................................................................................................................................................................................................................................................
+5.......a toy vendor supplies three types of toys: 
+Battery Based Toys, Key-based Toys, and Electrical Charging Based Toys. 
+  
+ The vendor gives a discount of 10% on orders for battery-based toys if the order is for more than Rs. 1000. 
+  
+ On orders of more than Rs. 100 for key-based toys, a discount of 5% is given, and a discount of 10% is given on orders for
+   
+electrical charging based toys of value more than Rs. 500.
+ Assume that the numeric codes 1,2 and 3 are used for battery based toys,
+  
+ key-based toys, and electrical charging based toysrespectively. 
+Write a program that reads the product code and
+   the order amount and prints out the net amount that the customer is required to pay
+ after the discount.
+
+
+def compute_discount():
+  
+    print("1. For Battery based Toys")
+    
+   print("2. For Key based Toys")
+   
+   print("3. Electric chargin based Toys")
+   
+  pc = int(input("Enter the product code (1,2 or 3)?:"))
+    
+  amt = int(input("Enter the amount:"))
+    
+  if pc==1:
+       
+        if amt>1000:
+            
+            dis = amt * 0.1
+        
+else:
+            
+           dis = 0
+    
+elif pc==2:
+        
+       if amt>100:
+            
+           dis = amt * 0.05
+   
+else:   
+         dis=0
+   
+ elif pc==3:
+       
+     if amt>500:
+            
+           dis = amt*0.1
+        
+else:
+            
+          dis = 0
+    
+else:
+        
+    print("Product is not available")
+    
+net_amt= amt - dis
+    
+   print("Customer has to pay:",net_amt)
+compute_discount()
+
+OUTPUT
+1. For Battery based Toys
+2. For Key based Toys
+3. Electric chargin based Toys
+Enter the product code (1,2 or 3)?: 2
+Enter the amount: 400
+Customer has to pay:  380.0
+
+........................................................................................................................................................................................................................................................................................................................................................................
+
+
+
+
+
