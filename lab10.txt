@@ -1,0 +1,88 @@
+1....Write a Python program to handle a ZeroDivisionError exception when dividing a number by zero.
+
+def div_num(dividend, divisor):
+    try:
+        result = dividend / divisor
+        print("Result of division:", result)
+    except ZeroDivisionError:
+        print("Error: Cannot divide by zero!")
+
+# Example usage
+try:
+    dividend = int(input("Enter the dividend: "))
+    divisor = int(input("Enter the divisor: "))
+    div_num(dividend, divisor)
+except ValueError:
+    print("Error: Please enter valid numbers!")
+
+OUTPUT
+
+Enter the dividend: 50
+Enter the divisor: 2
+Result of division: 25.0
+......................................................................................................................................................................................................................................................................................................................................................
+2...Write a Python program that prompts the user to input an integer and raises a ValueError exception if the input is not a valid integer. 
+
+def int_input(prompt):
+    while True:
+        try:
+            value = int(input(prompt))
+            return value
+        except ValueError:
+            print("Error: Please enter a valid integer!")
+
+# Example usage
+try:
+    user_input = int_input("Enter an integer: ")
+    print("integer entered:", user_input)
+except :
+    print("not entered")
+
+OUTPUT
+
+Enter an integer: 2
+integer entered: 2
+......................................................................................................................................................................................................................................................................................................................................................
+3.....Write a Python program that opens a file and handles a FileNotFoundError exception if the file does not exist. 
+
+try:
+    # Open the file in read mode
+    with open('filename.txt', 'r') as file:
+        # Read the content of the file
+        content = file.read()
+        print(content)
+except FileNotFoundError:
+    print("File not found. Please make sure the file exists.")
+
+OUTPUT
+
+File not found. Please make sure the file exists.
+..........................................................................................................................................................................................................................................................................................................................................................
+4... Write a Python program that prompts the user to input two numbers and raises a TypeError exception if the inputs are not numerical
+
+try:
+    num1 = input("Enter the first number: ")
+    num2 = input("Enter the second number: ")
+    
+    # Convert input  to numbers
+    num1 = float(num1)
+    num2 = float(num2)
+
+    result = num1 + num2
+    print("The sum of", num1, "and", num2, "is", result)
+    
+except ValueError:
+    print("Error: Please enter numerical values")
+
+OUTPUT
+
+Enter the first number: 40
+Enter the second number: 60
+The sum of 40.0 and 60.0 is 100.0
+...............................................................................................................................................................................................................................................................................................................................................................
+
+
+
+
+
+
