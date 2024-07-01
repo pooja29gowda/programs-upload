@@ -1,0 +1,49 @@
+1...... Write a function in python to read the content from a text file "ABC.txt" line by line and display the same on screen. 
+
+def read_file_and_display(filename):                                       
+    try:
+        with open(filename, 'r') as file:                               
+            for line in file:
+                print(line, end='')                                       
+    except FileNotFoundError:
+        print(f"File '{filename}' not found.")                             
+
+read_file_and_display("ABC.txt")                         
+
+OUTPUT
+
+File 'ABC.txt' not found.
+..............................................................................................................................................................................................................................................................................................................................
+2..Write a function in Python to count and display the total number of words in a text file “ABC.txt
+
+def count_words(filename):                                                
+    try:
+        with open(filename, 'r') as file:                                 
+            text = file.read()                                            
+            word_count = len(text.split())                                
+            print(f"Total number of words" '{filename}': 
+    except FileNotFoundError:
+        print(f"File '{filename}' not found.")                          
+
+count_words("ABC.txt")                                               
+
+OUTPUT
+
+Total number of words in 'ABC.txt': 4
+..................................................................................................................................................................................................................................................................................................................................
+3...Write a function in Python to count uppercase character in a text file “ABC.txt”
+ 
+def count_uppercase(filename):                                           
+    try:
+        with open(filename, 'r') as file:                                                   
+            text = file.read()                                           
+            uppercase_count = sum(1 for char in text if char.isupper())  
+            print(f"Total number of uppercase characters in '{filename}': {uppercase_count}")   
+    except FileNotFoundError:
+        print(f"File '{filename}' not found.")                      
+
+count_uppercase("ABC.txt")                                            
+
+output:
+Total number of uppercase characters in 'ABC.txt': 2
+...................................................................................................................................................................................................................................................................................................................................
